@@ -8,7 +8,6 @@ const endOfRow = [4,9,14,19,24,29];
 let index = 0;
 let row = 0;
 let win = false;
-console.log(wordle);
 
 /*--Functions--*/
 function keyboardEvent(event) {
