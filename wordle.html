@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Wordle Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/wordle.css">
+        <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">-->
+    </head>
+    <body>
+        <div class="intro">
+            <h1 class="title">Wordle!</h1>
+            <p class="subtitle">Word Guessing Game</p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="box"></div><div class="box"></div><div class="box"></div>
+                <div class="box"></div><div class="box"></div>
+            </div>
+            <div class="row">
+                <div class="box"></div><div class="box"></div><div class="box"></div>
+                <div class="box"></div><div class="box"></div>
+            </div>
+            <div class="row">
+                <div class="box"></div><div class="box"></div><div class="box"></div>
+                <div class="box"></div><div class="box"></div>
+            </div>
+            <div class="row">
+                <div class="box"></div><div class="box"></div><div class="box"></div>
+                <div class="box"></div><div class="box"></div>
+            </div>
+            <div class="row">
+                <div class="box"></div><div class="box"></div><div class="box"></div>
+                <div class="box"></div><div class="box"></div>
+            </div>
+            <div class="row">
+                <div class="box"></div><div class="box"></div><div class="box"></div>
+                <div class="box"></div><div class="box"></div>
+            </div>
+        </div>
+
+        <div id="input-container">
+            <div class="input-row">
+                <button onclick="keyboardEvent(event)">Q</button><button onclick="keyboardEvent(event)">W</button>
+                <button onclick="keyboardEvent(event)">E</button><button onclick="keyboardEvent(event)">R</button>
+                <button onclick="keyboardEvent(event)">T</button><button onclick="keyboardEvent(event)">Y</button>
+                <button onclick="keyboardEvent(event)">U</button><button onclick="keyboardEvent(event)">I</button>
+                <button onclick="keyboardEvent(event)">O</button><button onclick="keyboardEvent(event)">P</button>
+            </div>
+            <div class="input-row">
+                <button onclick="keyboardEvent(event)">A</button><button onclick="keyboardEvent(event)">S</button>
+                <button onclick="keyboardEvent(event)">D</button><button onclick="keyboardEvent(event)">F</button>
+                <button onclick="keyboardEvent(event)">G</button><button onclick="keyboardEvent(event)">H</button>
+                <button onclick="keyboardEvent(event)">J</button><button onclick="keyboardEvent(event)">K</button>
+                <button onclick="keyboardEvent(event)">L</button>
+            </div>
+            <div class="input-row">
+                <button class="special" onclick="keyboardEvent(event)">Enter</button>
+                <button onclick="keyboardEvent(event)">Z</button><button onclick="keyboardEvent(event)">X</button>
+                <button onclick="keyboardEvent(event)">C</button><button onclick="keyboardEvent(event)">V</button>
+                <button onclick="keyboardEvent(event)">B</button><button onclick="keyboardEvent(event)">N</button>
+                <button onclick="keyboardEvent(event)">M</button>
+                <button class="special" onclick="keyboardEvent(event)">Del</button>
+            </div>
+        </div>
+        
+        <script src="js/wordList.js"></script>
+        <script src="js/wordle.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>-->
+    </body>
+</html>
