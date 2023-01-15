@@ -1,0 +1,142 @@
+/*--Global Variables--*/
+:root {
+    --scale: 0;
+    --arrow-size: 10px;
+    --tooltip-color: black;
+}
+
+/*--Intro--*/
+.intro {
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 40px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 0px;
+}
+
+/*--Game Container--*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.4%;
+    width: 22%;
+    height: 100%;
+}
+
+.tooltip {
+    position: relative;
+    font-family: "Clear Sans","Helvetica Neue",Arial,sans-serif;
+    font-size: 18px;
+}
+
+.tooltip::before, .tooltip::after {
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    /* transition: 75ms transform; */
+    /* transform-origin: top center; */
+    z-index: 999;
+}
+
+.tooltip::before {
+    --translate-y: calc(-10% + var(--arrow-size));
+    content: attr(data-tooltip);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: max-content;
+    max-width: 100%;
+    background-color: var(--tooltip-color);
+    color: white;
+}
+
+.tooltip::after {
+    --translate-y: calc(-1 * var(--arrow-size));
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-bottom-color: var(--tooltip-color);
+    /* transform-origin: bottom center; */
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17%;
+    border: 2px solid rgb(150, 150, 150);
+    font-family: "Clear Sans","Helvetica Neue",Arial,sans-serif;
+    font-size: 40px;
+}
+
+/*--Input Container--*/
+#input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-row {
+    display: flex;
+}
+
+button {
+    width: 40px;
+    height: 50px;
+    margin: 2px;
+    background-color: white;
+    color: rgb(125, 125, 125);
+    border: 2px solid rgb(125, 125, 125);
+    border-radius: 5px;
+}
+
+.special {
+    width:55px;
+}
+
+/*--Statechange Styling--*/
+button:hover {
+    background-color: rgb(125, 125, 125);
+    color: white;
+}
+
+button:disabled {
+    border: 2px solid rgb(172, 59, 59);
+    background-color: rgb(172, 59, 59);
+    color: white;
+}
+
+/*--Animation Styling--*/
+@keyframes jitter {
+    0%   {left: 0px;}
+    20%  {left: 5px;}
+    40%  {left: -5px;}
+    60%  {left: 5px;}
+    80%  {left: -5px}
+    100% {left: 0px;}
+}
+
+.jitter-animate {
+    position: relative;
+    animation-name: jitter;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
